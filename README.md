@@ -1,1 +1,2 @@
 # Web-Based_Medical_System
+This is a context-aware recommendation system to diet and exercise plan based on the relevant context of the user.The Frontend of the project is made using Angular5, for the middleware project uses the Spring Boot Framework and MongoDb datbases is used to store the data.
