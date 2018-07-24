@@ -1,0 +1,245 @@
+<nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+<div class="container">
+<a class="navbar-brand" href="#">Check Your Health</a>
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+	<span class="navbar-toggler-icon"></span>
+</button>
+		<button class="btn btn-primary float-left" type="submit" routerLink="/olduser">Search User</button>
+</div>
+</nav>
+<div  *ngIf="x==0; else elseBlock">
+<div class="py-5 text-white opaque-overlay" style="background-image: url(./../../../assets/health1.jpg);">
+<form class="col-12">
+	<div class="form-row">
+		<div class="form-group col-md-3">
+			<label class="text-dark"> Email ID</label>
+			<input type="text" class="form-control" id="emailId" [(ngModel)]="emailId" [ngModelOptions]="{standalone: true}" >
+		</div>
+	</div>
+	<div class="container">
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Temp</label>
+			<input type="text" class="form-control" id="temp" [(ngModel)]="temp" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Temp Weight</label>
+			<input type="text" class="form-control" id="tempWeight" [(ngModel)]="tempWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Blood Pressure</label>
+			<input type="text" class="form-control" id="bloodPressure" [(ngModel)]="bloodPressure" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Blood Pressure Weight</label>
+			<input type="text" class="form-control" id="bloodPressureWeight" [(ngModel)]="bloodPressureWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Diabetes</label>
+			<input type="text" class="form-control" id="diabetes" [(ngModel)]="diabetes" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Diabetes Weight</label>
+			<input type="text" class="form-control" id="diabetesWeight" [(ngModel)]="diabetesWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">BMI</label>
+			<input type="text" class="form-control" id="bmi" [(ngModel)]="bmi" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">BMI Weight</label>
+			<input type="text" class="form-control" id="bmiWeight" [(ngModel)]="bmiWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">WBC</label>
+			<input type="text" class="form-control" id="wbc" [(ngModel)]="wbc" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">WBC Weight</label>
+			<input type="text" class="form-control" id="wbcWeight" [(ngModel)]="wbcWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">RBC</label>
+			<input type="text" class="form-control" id="rbc" [(ngModel)]="rbc" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">RBC Weight</label>
+			<input type="text" class="form-control" id="rbcWeight" [(ngModel)]="rbcWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Pigmentation</label>
+			<input type="text" class="form-control" id="pigmentation" [(ngModel)]="pigmentation" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Pigmentation Weight</label>
+			<input type="text" class="form-control" id="pigmentationWeight" [(ngModel)]="pigmentationWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Lipase</label>
+			<input type="text" class="form-control" id="lipase" [(ngModel)]="lipase" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Lipase Weight</label>
+			<input type="text" class="form-control" id="lipaseWeight" [(ngModel)]="lipaseWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+	<div class="form-group col-md-6">
+			<label class="text-dark">Electrolyte</label>
+			<input type="text" class="form-control" id="electrolyte" [(ngModel)]="electrolyte" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Electrolyte Weight</label>
+			<input type="text" class="form-control" id="electrolyteWeight" [(ngModel)]="electrolyteWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Drug Content</label>
+			<input type="text" class="form-control" id="drugContent" [(ngModel)]="drugContent" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Drug Content Weight</label>
+			<input type="text" class="form-control" id="drugContentWeight" [(ngModel)]="drugContentWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Potassium</label>
+			<input type="text" class="form-control" id="potassium" [(ngModel)]="potassium" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Potassium Weight</label>
+			<input type="text" class="form-control" id="potassiumWeight" [(ngModel)]="potassiumWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Sodium</label>
+			<input type="text" class="form-control" id="sodium" [(ngModel)]="sodium" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Sodium Weight</label>
+			<input type="text" class="form-control" id="sodiumWeight" [(ngModel)]="sodiumWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Chloride</label>
+			<input type="text" class="form-control" id="chloride" [(ngModel)]="chloride" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Chloride Weight</label>
+			<input type="text" class="form-control" id="chlorideWeight" [(ngModel)]="chlorideWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Calcuim</label>
+			<input type="text" class="form-control" id="calcuim" [(ngModel)]="calcuim" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Calcuim Weight</label>
+			<input type="text" class="form-control" id="calcuimWeight" [(ngModel)]="calcuimWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Hemaglobin</label>
+			<input type="text" class="form-control" id="hemaglobin" [(ngModel)]="hemaglobin" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Hemaglobin Weight</label>
+			<input type="text" class="form-control" id="hemaglobinWeight" [(ngModel)]="hemaglobinWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Alkaline</label>
+			<input type="text" class="form-control" id="alkaline" [(ngModel)]="alkaline" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Alkaline Weight</label>
+			<input type="text" class="form-control" id="alkalineWeight" [(ngModel)]="alkalineWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label class="text-dark">Platelet</label>
+			<input type="text" class="form-control" id="platelet" [(ngModel)]="platelet" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label class="text-dark">Platelet Weight</label>
+			<input type="text" class="form-control" id="plateletWeight" [(ngModel)]="plateletWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+	<button  type="submit" class="btn btn-primary" (click)="add()" >Save</button>
+</div>
+</form>
+</div>
+</div>
+
+<ng-template #elseBlock>
+	<div style="height: 100%; background-image: url(./../../../assets/health1.jpg);">
+	<div class="container elsy">
+		<h2>You have {{disease}}</h2>
+		<h4 class="mt-5">Diet and Exercise Plan</h4>
+			<p class="text-dark ">{{diet}}</p>
+	</div>
+</div>
+</ng-template>
+
+
+<!--<div class="py-5 text-white opaque-overlay" style="background-image: url(&quot;https://pingendo.github.io/templates/sections/assets/cover_restaurant.jpg&quot;);" >
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3"></div>
+			<div class="col-md-6">
+				<h1 class="text-gray-dark">Contact form</h1>
+				<p class="lead mb-4">Complete all the fields below to send us a message</p>
+				<form>
+					<div class="form-group">
+						<label>Email address</label>
+						<input type="email" name="email" class="form-control" placeholder="Enter email"> </div>
+					<div class="form-group">
+						<label>Password</label>
+						<input type="password" name="password" class="form-control" placeholder="Password"> </div>
+					<button type="submit" class="btn btn-primary">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+-->

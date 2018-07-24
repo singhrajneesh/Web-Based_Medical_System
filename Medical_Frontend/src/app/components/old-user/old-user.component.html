@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+<div class="container">
+<a class="navbar-brand" href="#">Check Your Health</a>
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    <button class="btn btn-primary float-right" type="submit" routerLink="/olduser">Search User</button>
+</div>
+</nav>
+<div class="container">
+<div class="row my-4">
+<label class="col-md-2 text-center"><b><h4>Email ID</h4></b></label>
+<input type="text" class="form-control col-md-8 px-1" id="email" [(ngModel)]="emailAddress" [ngModelOptions]="{standalone: true}">
+<button  type="submit" class="btn btn-primary col-md-2" (click)="get()">GET DETAILS</button>
+</div>
+</div>
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-2"> </div>
+        <div class="col-md-8">
+          <table class="table text-center" border="1">
+            <thead>
+              <tr>
+                <th class="text-center">Parameters</th>
+                <th class="text-center">Result</th>
+                <th class="text-center">Weight</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Disease</td>
+                <td class="bg-light" colspan="2">{{disease}}</td>
+                <!--<td >{{plateletWeight}}</td>-->
+              </tr>
+              <tr>
+                <td>Temperature</td>
+                <td class="bg-light" >{{temp}}</td>
+                <td >{{tempWeight}}</td>
+              </tr>
+              <tr>
+                <td>Blood Pressure</td>
+                <td class="bg-light" >{{bloodPressure}}</td>
+                <td >{{bloodPressureWeight}}</td>
+              </tr>
+              <tr>
+                <td>Glucose</td>
+                <td class="bg-light" >{{diabetes}}</td>
+                <td >{{diabetesWeight}}</td>
+              </tr>
+              <tr>
+                <td>BMI</td>
+                <td class="bg-light" >{{bmi}}</td>
+                <td >{{bmiWeight}}</td>
+              </tr>
+              <tr>
+                <td>WBC</td>
+                <td class="bg-light" >{{wbc}}</td>
+                <td >{{wbcWeight}}</td>
+              </tr>
+              <tr>
+                <td>RBC</td>
+                <td class="bg-light" >{{rbc}}</td>
+                <td >{{rbcWeight}}</td>
+              </tr>
+              <tr>
+                <td>Pigementation</td>
+                <td class="bg-light" >{{pigmentation}}</td>
+                <td >{{pigmentationWeight}}</td>
+              </tr>
+              <tr>
+                <td>Lipase</td>
+                <td class="bg-light" >{{lipase}}</td>
+                <td >{{lipaseWeight}}</td>
+              </tr>
+              <tr>
+                <td>Electrolyte</td>
+                <td class="bg-light" >{{electrolyte}}</td>
+                <td >{{electrolyteWeight}}</td>
+              </tr>
+              <tr>
+                <td>Drug Content</td>
+                <td class="bg-light" >{{drugContent}}</td>
+                <td >{{drugContentWeight}}</td>
+              </tr>
+              <tr>
+                <td>Potassium</td>
+                <td class="bg-light" >{{potassium}}</td>
+                <td >{{potassiumWeight}}</td>
+              </tr>
+              <tr>
+                <td>Sodium</td>
+                <td class="bg-light" >{{sodium}}</td>
+                <td >{{sodiumWeight}}</td>
+              </tr>
+              <tr>
+                <td>Chloride</td>
+                <td class="bg-light" >{{chloride}}</td>
+                <td >{{chlorideWeight}}</td>
+              </tr>
+              <tr>
+                <td>Calcuim</td>
+                <td class="bg-light" >{{calcuim}}</td>
+                <td >{{calcuimWeight}}</td>
+              </tr>
+              <tr>
+                <td>Hemaglobin</td>
+                <td class="bg-light" >{{hemaglobin}}</td>
+                <td >{{hemaglobinWeight}}</td>
+              </tr>
+              <tr>
+                <td>Alkaline Phosphate</td>
+                <td class="bg-light" >{{alkaline}}</td>
+                <td >{{alkalineWeight}}</td>
+              </tr>
+              <tr>
+                <td>Platelet</td>
+                <td class="bg-light" >{{platelet}}</td>
+                <td >{{plateletWeight}}</td>
+              </tr>
+              <tr>
+                <td>Diet</td>
+                <td class="bg-light" colspan="2">{{diet}}</td>
+                <!--<td >{{plateletWeight}}</td>-->
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>

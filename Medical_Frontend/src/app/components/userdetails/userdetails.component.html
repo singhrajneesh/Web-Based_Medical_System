@@ -1,0 +1,225 @@
+<nav class="navbar navbar-expand-md bg-secondary navbar-dark">
+<div class="container">
+<a class="navbar-brand" href="#">Check Your Health</a>
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+  <span class="navbar-toggler-icon"></span>
+</button>
+    <button class="btn btn-primary float-right" type="submit" routerLink="/olduser">Search User</button>
+</div>
+</nav>
+<div  *ngIf="x==0; else elseBlock">
+<div class="py-5 text-white opaque-overlay" style="background-image: url(./../../../assets/yoga.jpeg);" >
+<form class="col-12">
+	<div class="form-row">
+		<div class="form-group col-md-3">
+			<label> Email ID</label>
+			<input type="text" class="form-control" id="emailId" [(ngModel)]="emailId" [ngModelOptions]="{standalone: true}" >
+		</div>
+    <div class="form-group col-md-3">
+      <label>&emsp;</label>
+<button  type="submit" class="btn btn-primary" (click)="get()">Get Details</button>
+		</div>
+
+	</div>
+	<div class="container">
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Temp</label>
+			<input type="text" class="form-control" placeholder="{{temp}}" id="temp" [(ngModel)]="temp" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Temp Weight</label>
+			<input type="text" class="form-control" placeholder="{{tempWeight}}" id="tempWeight" [(ngModel)]="tempWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Blood Pressure</label>
+			<input type="text" class="form-control" placeholder="{{bloodPressure}}"  id="bloodPressure" [(ngModel)]="bloodPressure" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Blood Pressure Weight</label>
+			<input type="text" class="form-control" placeholder="{{bloodPressureWeight}}" id="bloodPressureWeight" [(ngModel)]="bloodPressureWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+	<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Diabetes</label>
+			<input type="text" class="form-control" placeholder="{{diabetes}}" id="diabetes" [(ngModel)]="diabetes" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Diabetes Weight</label>
+			<input type="text" class="form-control" placeholder="{{diabetesWeight}}" id="diabetesWeight" [(ngModel)]="diabetesWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >BMI</label>
+			<input type="text" class="form-control" placeholder="{{bmi}}" id="bmi" [(ngModel)]="bmi" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >BMI Weight</label>
+			<input type="text" class="form-control" placeholder="{{bmiWeight}}" id="bmiWeight" [(ngModel)]="bmiWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >WBC</label>
+			<input type="text" class="form-control" placeholder="{{wbc}}" id="wbc" [(ngModel)]="wbc" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >WBC Weight</label>
+			<input type="text" class="form-control" placeholder="{{wbcWeight}}" id="wbcWeight" [(ngModel)]="wbcWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >RBC</label>
+			<input type="text" class="form-control" placeholder="{{rbc}}" id="rbc" [(ngModel)]="rbc" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >RBC Weight</label>
+			<input type="text" class="form-control" placeholder="{{rbcWeight}}" id="rbcWeight" [(ngModel)]="rbcWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Pigmentation</label>
+			<input type="text" class="form-control" placeholder="{{pigmentation}}" id="pigmentation" [(ngModel)]="pigmentation" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Pigmentation Weight</label>
+			<input type="text" class="form-control" placeholder="{{pigmentationWeight}}" id="pigmentationWeight" [(ngModel)]="pigmentationWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Lipase</label>
+			<input type="text" class="form-control" placeholder="{{lipase}}" id="lipase" [(ngModel)]="lipase" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Lipase Weight</label>
+			<input type="text" class="form-control" placeholder="{{lipaseWeight}}" id="lipaseWeight" [(ngModel)]="lipaseWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+	<div class="form-group col-md-6">
+			<label >Electrolyte</label>
+			<input type="text" class="form-control" placeholder="{{electrolyte}}" id="electrolyte" [(ngModel)]="electrolyte" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Electrolyte Weight</label>
+			<input type="text" class="form-control" placeholder="{{electrolyteWeight}}" id="electrolyteWeight" [(ngModel)]="electrolyteWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Drug Content</label>
+			<input type="text" class="form-control" placeholder="{{drugContent}}" id="drugContent" [(ngModel)]="drugContent" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Drug Content Weight</label>
+			<input type="text" class="form-control" placeholder="{{drugContentWeight}}" id="drugContentWeight" [(ngModel)]="drugContentWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Potassium</label>
+			<input type="text" class="form-control" placeholder="{{potassium}}" id="potassium" [(ngModel)]="potassium" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Potassium Weight</label>
+			<input type="text" class="form-control" placeholder="{{potassiumWeight}}" id="potassiumWeight" [(ngModel)]="potassiumWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Sodium</label>
+			<input type="text" class="form-control" placeholder="{{sodium}}" id="sodium" [(ngModel)]="sodium" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Sodium Weight</label>
+			<input type="text" class="form-control" placeholder="{{sodiumWeight}}" id="sodiumWeight" [(ngModel)]="sodiumWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Chloride</label>
+			<input type="text" class="form-control" placeholder="{{chloride}}" id="chloride" [(ngModel)]="chloride" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Chloride Weight</label>
+			<input type="text" class="form-control" placeholder="{{chlorideWeight}}" id="chlorideWeight" [(ngModel)]="chlorideWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Calcuim</label>
+			<input type="text" class="form-control" placeholder="{{calcuimWeight}}" id="calcuim" [(ngModel)]="calcuim" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Calcuim Weight</label>
+			<input type="text" class="form-control" placeholder="{{calcuimWeight}}" id="calcuimWeight" [(ngModel)]="calcuimWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Hemaglobin</label>
+			<input type="text" class="form-control" placeholder="{{hemaglobin}}" id="hemaglobin" [(ngModel)]="hemaglobin" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Hemaglobin Weight</label>
+			<input type="text" class="form-control" placeholder="{{hemaglobinWeight}}" id="hemaglobinWeight" [(ngModel)]="hemaglobinWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Alkaline</label>
+			<input type="text" class="form-control" placeholder="{{alkaline}}" id="alkaline" [(ngModel)]="alkaline" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Alkaline Weight</label>
+			<input type="text" class="form-control" placeholder="{{alkalineWeight}}" id="alkalineWeight" [(ngModel)]="alkalineWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+</div>
+
+<div class="form-row">
+		<div class="form-group col-md-6">
+			<label >Platelet</label>
+			<input type="text" class="form-control" placeholder="{{platelet}}" id="platelet" [(ngModel)]="platelet" [ngModelOptions]="{standalone: true}">
+		</div>
+		<div class="form-group col-md-6">
+			<label >Platelet Weight</label>
+			<input type="text" class="form-control" placeholder="{{plateletWeight}}" id="plateletWeight" [(ngModel)]="plateletWeight" [ngModelOptions]="{standalone: true}">
+		</div>
+	</div>
+  <button  type="submit" class="btn btn-primary" (click)="undisable()">Edit</button>
+  <button  type="submit" class="btn btn-primary" (click)="put()">Update</button>
+
+</div>
+</form>
+</div>
+</div>
+<ng-template #elseBlock>
+	<div class="container bg-grey" >
+    		<h2>You have {{disease}}</h2>
+		<h4 class="mt-5">Your updated Diet and Exercise Plan</h4>
+			<p class="text-dark mt-5">{{diet}}</p>
+	</div>
+</ng-template>
